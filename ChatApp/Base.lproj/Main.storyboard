@@ -10,42 +10,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="me6-Eg-FI3">
             <objects>
-                <viewController id="lWO-O6-QkL" sceneMemberID="viewController">
+                <viewController id="lWO-O6-QkL" customClass="VCLogin" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Rm-cS-O1u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name in Chat Room" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-bz-crY">
-                                <rect key="frame" x="21" y="309" width="332" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name in Chat room" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZb-qf-Lo6">
+                                <rect key="frame" x="46" y="254" width="282" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-kl-pAz">
-                                <rect key="frame" x="168" y="373" width="38" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="4y8-ho-n82"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t70-ZE-tUR">
+                                <rect key="frame" x="168" y="318" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="buLogin:" destination="lWO-O6-QkL" eventType="touchUpInside" id="0ef-4p-Noy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="yxf-kl-pAz" firstAttribute="top" secondItem="zPw-bz-crY" secondAttribute="bottom" constant="34" id="3uM-ud-w9q"/>
-                            <constraint firstItem="yxf-kl-pAz" firstAttribute="leading" secondItem="BWJ-yO-tVq" secondAttribute="leading" constant="168" id="AUU-Rh-SQB"/>
-                            <constraint firstItem="BWJ-yO-tVq" firstAttribute="trailing" secondItem="zPw-bz-crY" secondAttribute="trailing" constant="22" id="Egf-Nw-ZhQ"/>
-                            <constraint firstItem="BWJ-yO-tVq" firstAttribute="trailing" secondItem="yxf-kl-pAz" secondAttribute="trailing" constant="169" id="Ka0-Sc-va2"/>
-                            <constraint firstItem="yxf-kl-pAz" firstAttribute="leading" secondItem="BWJ-yO-tVq" secondAttribute="leading" constant="168" id="N92-Jr-1fg"/>
-                            <constraint firstItem="yxf-kl-pAz" firstAttribute="top" secondItem="zPw-bz-crY" secondAttribute="bottom" constant="34" id="SRv-RZ-sAl"/>
-                            <constraint firstItem="zPw-bz-crY" firstAttribute="leading" secondItem="BWJ-yO-tVq" secondAttribute="leading" constant="21" id="aH7-qb-xHG"/>
-                            <constraint firstItem="zPw-bz-crY" firstAttribute="top" secondItem="BWJ-yO-tVq" secondAttribute="top" constant="289" id="aQo-T7-RA3"/>
-                            <constraint firstItem="BWJ-yO-tVq" firstAttribute="trailing" secondItem="yxf-kl-pAz" secondAttribute="trailing" constant="169" id="wGr-Qs-blp"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BWJ-yO-tVq"/>
                     </view>
+                    <connections>
+                        <outlet property="laUserName" destination="cZb-qf-Lo6" id="8sE-gq-I3s"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ChatRoom" id="DKY-2T-2LG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCx-rl-Ae6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

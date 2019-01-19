@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     @IBAction func buSendToRoom(_ sender: Any) {
         
         let dic = [ "Text" : txtChatText.text,
-                    "name" : "Dawid",
+                    "name" : NSUserName,
                     "postDate" : ServerValue.timestamp()] as [String:Any]
         self.ref.child("chat").childByAutoId().setValue(dic)
     }

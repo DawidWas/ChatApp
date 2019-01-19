@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		691E277C88E961BF36D90038 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199D2CC7FC18DEAD64E23380 /* Pods_ChatApp.framework */; };
+		D331031621F3A2EA0052BD05 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D331031521F3A2EA0052BD05 /* VCLogin.swift */; };
 		D38353DE21F249B000D53D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38353DD21F249B000D53D9B /* AppDelegate.swift */; };
 		D38353E021F249B000D53D9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38353DF21F249B000D53D9B /* ViewController.swift */; };
 		D38353E321F249B000D53D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38353E121F249B000D53D9B /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		199D2CC7FC18DEAD64E23380 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6013DD63B8923E6AEFC29FDF /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		CEE463F6E2E6D9B2514268CC /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D331031521F3A2EA0052BD05 /* VCLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
 		D38353DA21F249B000D53D9B /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38353DD21F249B000D53D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38353DF21F249B000D53D9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				D38353DD21F249B000D53D9B /* AppDelegate.swift */,
 				D38353DF21F249B000D53D9B /* ViewController.swift */,
 				D38353E121F249B000D53D9B /* Main.storyboard */,
+				D331031521F3A2EA0052BD05 /* VCLogin.swift */,
 				D38353E421F249B000D53D9B /* Assets.xcassets */,
 				D38353E621F249B000D53D9B /* LaunchScreen.storyboard */,
 				D38353E921F249B000D53D9B /* Info.plist */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38353E021F249B000D53D9B /* ViewController.swift in Sources */,
+				D331031621F3A2EA0052BD05 /* VCLogin.swift in Sources */,
 				D38353DE21F249B000D53D9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

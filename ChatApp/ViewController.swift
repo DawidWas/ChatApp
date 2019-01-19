@@ -10,7 +10,10 @@ import UIKit
 import Firebase
 class ViewController: UIViewController {
     
-    var ref = Database.database().reference()
+   // var ref = Database.database().reference()
+    var ref = DatabaseReference.init()
+    
+    
     @IBOutlet weak var txtChatText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,7 @@ class ViewController: UIViewController {
         loginAnony()
         
         self.ref = Database.database().reference()
+        
         
     }
 
@@ -28,7 +32,7 @@ class ViewController: UIViewController {
         if let error = error {
             print("Cannot login: \(error)")
         } else {
-            print("User UID \(user?.user.uid ?? <#default value#>)")
+            print("User UID \(user?.user.uid)")
             }
     }
     }
@@ -36,8 +40,10 @@ class ViewController: UIViewController {
     
     @IBAction func buSendToRoom(_ sender: Any) {
         
-        self.ref.child("chat").setValue("Dawid")
+        let dic = [ "Text" : txtChatText.text,
+                    "name" : "Dawid",
+                    "postDate" : ServerValue.timestamp()] as [String:Any]
+        self.ref.child("chat").childByAutoId().setValue(dic)
     }
-    
 }
 

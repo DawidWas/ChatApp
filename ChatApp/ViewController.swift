@@ -9,11 +9,16 @@
 import UIKit
 import Firebase
 class ViewController: UIViewController {
-
+    
+    var ref = Database.database().reference()
+    @IBOutlet weak var txtChatText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loginAnony()
+        
+        self.ref = Database.database().reference()
+        
     }
 
     func loginAnony(){
@@ -23,9 +28,15 @@ class ViewController: UIViewController {
         if let error = error {
             print("Cannot login: \(error)")
         } else {
-            print("User UID \(user?.user.uid)")
+            print("User UID \(user?.user.uid ?? <#default value#>)")
             }
     }
+    }
+    
+    
+    @IBAction func buSendToRoom(_ sender: Any) {
+        
+        self.ref.child("chat").setValue("Dawid")
     }
     
 }

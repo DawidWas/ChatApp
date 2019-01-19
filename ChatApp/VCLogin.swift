@@ -26,7 +26,7 @@ class VCLogin: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChatRoom" {
             if let dis = segue.destination as? ViewController {
-                dis.UserName = laUserName.text
+                dis.UserName = UserName.text
             }
         }
     }
